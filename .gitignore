@@ -3,3 +3,7 @@ venv
 *.pyc
 
 *.sqlite3
+
+target
+reports
+
