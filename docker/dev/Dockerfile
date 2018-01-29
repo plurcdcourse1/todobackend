@@ -1,6 +1,6 @@
-FROM tom/todobackend-base:latest
+FROM plurcdcourse1/todobackend-base:latest
 
-MAINTAINER tom
+MAINTAINER plurcdcourse1
 
 RUN apt-get update && \
 	apt-get install -qy python-dev libmysqlclient-dev

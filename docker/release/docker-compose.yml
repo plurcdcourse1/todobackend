@@ -21,7 +21,7 @@ app:
     - "--die-on-term"
 
 test:
-  image: tom/todobackend-specs
+  image: plurcdcourse1/todobackend-specs
   links:
     - nginx
   environment:
@@ -59,7 +59,7 @@ db:
     MYSQL_ROOT_PASSWORD: root
 
 agent:
-  image: tom/ansible
+  image: plurcdcourse1/ansible
   links:
     - db
   environment:
