@@ -84,13 +84,13 @@ buildtag:
 	${INFO} "Tagging complete"
 
 login:
-	@ docker login -u $$DOCKER_USER -p $$DOCKER_PASSWORD -e $$DOCKER_EMAIL $(DOCKER_REGISTRY_AUTH)
+	@ docker login -u $$DOCKER_USER -p $$DOCKER_PASSWORD $(DOCKER_REGISTRY_AUTH)
 
 logout:
 	@ docker logout
 
 publish:
-	@$(foreach tag,$(shell echo $(REPO_EXPR)), docker push $(tag);)
+	@ $(foreach tag,$(shell echo $(REPO_EXPR)), docker push $(tag);)
 
 YELLOW := "\e[1;33m"
 NC := "\e[0m"
